@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura HZ - Privacy Policy</title>
+  <style>
+    :root {
+      --bg-color: #050505;
+      --card-bg: #121212;
+      --text-main: #E0E0E0;
+      --text-muted: #A0A0A0;
+      --accent: #03DAC5;
+      --accent-secondary: #9A4DFF;
+    }
 
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px 20px;
+      padding: 40px;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid #222;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      color: var(--text-main);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .date {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+      display: block;
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-top: 40px;
+      font-size: 1.4rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      color: var(--text-main);
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #CCCCCC;
+    }
+
+    strong {
+      color: #fff;
+    }
+
+    ul {
+      background: #1A1A1A;
+      padding: 20px 40px;
+      border-radius: 12px;
+      border-left: 3px solid var(--accent-secondary);
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #DDDDDD;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: var(--accent-secondary);
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Privacy Policy</h1>
+  <span class="date"><strong>Effective Date:</strong> February 18, 2026</span>
+
+  <p>This Privacy Policy applies to the <strong>Aura HZ</strong> mobile application (the "App") developed by <strong>Auraluxe Dev</strong>. This policy describes how we handle your data and is intended to inform you about our practices regarding the collection, use, and disclosure of information.</p>
+
+  <p>By downloading and using the App, you agree to the terms of this Privacy Policy.</p>
+
+  <h2>1. Data Collection & Usage (Google Play Data Safety)</h2>
+  <p>We are committed to a <strong>"Privacy by Design"</strong> philosophy. To be transparent with our users regarding the Google Play Data Safety section:</p>
+
+  <h3>A. Personal Data</h3>
+  <p>We do <strong>not</strong> collect, store, transmit, or share any Personally Identifiable Information (PII). This includes:</p>
+  <ul>
+    <li>Names, Addresses, or Phone Numbers</li>
+    <li>Email Addresses</li>
+    <li>User IDs or Account Credentials</li>
+    <li>Financial or Payment Information</li>
+  </ul>
+
+  <h3>B. Device & Usage Data</h3>
+  <p>The App operates as a standalone utility. We do <strong>not</strong> collect:</p>
+  <ul>
+    <li>Device Identifiers (IMEI, MAC Address, Advertising ID)</li>
+    <li>Location Data (GPS or Coarse Location)</li>
+    <li>App Usage Statistics or Crash Logs (No third-party analytics)</li>
+    <li>Contacts or Calendar information</li>
+  </ul>
+
+  <h2>2. Internet & Network Access</h2>
+  <p>The App functions primarily as an <strong>offline</strong> utility. However, the App requires internet permissions for specific, non-data-collecting system functions:</p>
+  <ul>
+    <li><strong>Google Play Licensing Service:</strong> To verify that the App was legitimately purchased/downloaded from the Google Play Store to prevent piracy.</li>
+    <li><strong>Security Checks:</strong> To ensure the integrity of the APK file has not been tampered with.</li>
+  </ul>
+  <p>No user content or personal data is transmitted during these verification processes.</p>
+
+  <h2>3. Local Data Storage</h2>
+  <p>All user-generated content and preferences are stored <strong>locally</strong> on your device within the App's isolated sandbox storage (`SQLite Database` and `SharedPreferences`).</p>
+  <p>This data includes:</p>
+  <ul>
+    <li>Custom frequency presets</li>
+    <li>App settings (Volume, Haptics, Theme)</li>
+    <li>Usage streaks and gamification stats</li>
+    <li>Local alarm schedules</li>
+  </ul>
+  <p><strong>Note:</strong> Since we do not have cloud servers, uninstalling the App or clearing its data via Android Settings will permanently delete this local data. We cannot recover it for you.</p>
+
+  <h2>4. Android Permissions Declaration</h2>
+  <p>We request the following permissions solely to enable specific App functionalities:</p>
+
+  <h3>A. POST_NOTIFICATIONS (Android 13+)</h3>
+  <p><strong>Purpose:</strong> Used to display media playback controls in the notification shade and to deliver user-scheduled daily reminders.</p>
+
+  <h3>B. VIBRATE & HAPTIC FEEDBACK</h3>
+  <p><strong>Purpose:</strong> Used for the "Breath Sync" feature to provide tactile feedback during meditation exercises.</p>
+
+  <h3>C. AUDIO FOCUS & FOREGROUND SERVICE</h3>
+  <p><strong>Purpose:</strong> Required to play audio in the background while the screen is off or while using other apps. This ensures uninterrupted playback sessions.</p>
+
+  <h3>D. SCHEDULE_EXACT_ALARM</h3>
+  <p><strong>Purpose:</strong> Used strictly for the "Daily Reminder" feature to trigger notifications at the exact time chosen by the user.</p>
+
+  <h2>5. Children’s Privacy</h2>
+  <p>The App does not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children. Since the App functions offline and does not feature chat, social sharing, or data collection, it is safe for general audiences.</p>
+
+  <h2>6. Third-Party Service Providers</h2>
+  <p>The App contains <strong>zero</strong> third-party SDKs for:</p>
+  <ul>
+    <li>Advertising (AdMob, Unity Ads, etc.)</li>
+    <li>Analytics (Firebase, Google Analytics, Crashlytics)</li>
+    <li>Social Media Integration (Facebook SDK, etc.)</li>
+  </ul>
+  <p>This ensures that your usage habits remain private and are not tracked across other apps or websites.</p>
+
+  <h2>7. Security</h2>
+  <p>We value your trust in providing us your local data. We strive to use commercially acceptable means of protecting it by utilizing standard Android encryption for local storage. However, remember that no method of electronic storage is 100% secure.</p>
+
+  <h2>8. Changes to This Privacy Policy</h2>
+  <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+  <p>These changes are effective immediately after they are posted on this page.</p>
+
+  <h2>9. Contact Us</h2>
+  <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us. We are committed to resolving any privacy concerns you may have.</p>
+
+  <p><strong>Developer:</strong> Auraluxe Dev</p>
+  <p><strong>Support Email:</strong> <a href="mailto:help.auraluxedev@gmail.com">help.auraluxedev@gmail.com</a></p>
+
+  <div class="footer">
+    &copy; 2026 Aura HZ. All rights reserved.
+  </div>
+</div>
+
+</body>
+</html>
