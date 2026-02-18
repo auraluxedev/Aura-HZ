@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aura HZ | Precision Neuro-Entrainment</title>
-    <meta name="description" content="Aura HZ - Advanced Binaural Beats & Isochronic Tones for Focus, Sleep, and Meditation.">
+    <meta name="description" content="Aura HZ - Advanced Binaural Beats, Breathwork, and Nature Ambience for Focus, Sleep, and Meditation.">
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
@@ -52,16 +52,16 @@
 
         /* --- HEADER --- */
         header {
-            padding: 30px 5%;
+            padding: 25px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--surface-border);
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(5, 5, 5, 0.8);
+            background: rgba(5, 5, 5, 0.85);
         }
 
         .logo {
@@ -74,15 +74,16 @@
         }
 
         .dev-name {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             font-weight: 500;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         /* --- HERO SECTION --- */
         .hero {
-            padding: 100px 5%;
+            padding: 120px 5% 80px;
             text-align: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -92,7 +93,7 @@
             font-size: 4rem;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             letter-spacing: -1px;
         }
 
@@ -105,7 +106,7 @@
         .hero p {
             font-size: 1.2rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 40px;
         }
 
@@ -128,7 +129,7 @@
 
         /* --- PHONE MOCKUP (CSS Only) --- */
         .mockup-container {
-            margin-top: 60px;
+            margin-top: 70px;
             display: flex;
             justify-content: center;
             perspective: 1000px;
@@ -141,7 +142,7 @@
             border-radius: 40px;
             border: 8px solid #222;
             position: relative;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 0 2px #333;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 0 2px #333;
             overflow: hidden;
             transform: rotateX(10deg) rotateY(0deg);
             transition: transform 0.5s ease;
@@ -161,27 +162,35 @@
             align-items: center;
         }
 
-        /* Visualizer Animation inside Phone */
+        /* Visualizer Animation */
         .visualizer-bar {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             border: 2px solid var(--accent-cyan);
-            animation: pulseRing 2s infinite;
+            animation: pulseRing 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
         }
 
         @keyframes pulseRing {
             0% { transform: scale(0.5); opacity: 1; border-color: var(--accent-cyan); }
-            100% { transform: scale(2.5); opacity: 0; border-color: var(--accent-purple); }
+            100% { transform: scale(2.2); opacity: 0; border-color: var(--accent-purple); }
         }
 
         /* --- FEATURES GRID --- */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            font-weight: 800;
+        }
+
         .features {
-            padding: 80px 5%;
+            padding: 0 5% 100px;
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
@@ -190,29 +199,51 @@
             border: 1px solid var(--surface-border);
             padding: 40px;
             border-radius: 24px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-purple);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card-icon {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--accent-cyan);
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
             color: var(--text-main);
         }
 
         .card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         /* --- FOOTER --- */
@@ -220,7 +251,7 @@
             padding: 60px 5%;
             text-align: center;
             border-top: 1px solid var(--surface-border);
-            margin-top: 60px;
+            background: rgba(5, 5, 5, 0.9);
         }
 
         .footer-links a {
@@ -244,8 +275,9 @@
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
-            .hero { padding: 60px 5%; }
+            .hero { padding: 80px 5%; }
             .phone { width: 260px; height: 520px; }
+            .features { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -260,36 +292,58 @@
 
     <section class="hero">
         <h1>Resonate <br><span class="gradient-text">Your Mind.</span></h1>
-        <p>Advanced binaural beats, isochronic tones, and psychoacoustic engineering designed to unlock focus, relaxation, and deep sleep.</p>
+        <p>The ultimate offline psychoacoustic tool. Combine clinical-grade binaural beats with advanced breathwork and nature ambience to hack your brain state.</p>
         
-        <a href="#" class="cta-button">Coming Soon</a>
+        <a href="#" class="cta-button">Available on Android</a>
 
         <div class="mockup-container">
             <div class="phone">
                 <div class="screen">
-                    <div style="font-weight:bold; letter-spacing:4px; margin-bottom:40px; color:white;">AURA HZ</div>
+                    <div style="font-weight:bold; letter-spacing:4px; margin-bottom:40px; color:white; opacity:0.8;">AURA HZ</div>
                     <div class="visualizer-bar"></div>
-                    <div style="margin-top:40px; color:#555; font-size:0.8rem; letter-spacing:2px;">PLAYING</div>
+                    <div style="margin-top:40px; color:#555; font-size:0.7rem; letter-spacing:3px; text-transform:uppercase;">Deep Focus Mode</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <h2 class="section-title">System Capabilities</h2>
+
     <section class="features">
         <div class="card">
             <div class="card-icon">🌊</div>
             <h3>Smart Sweep™</h3>
-            <p>Our proprietary algorithm prevents neural habituation by subtly modulating frequencies, ensuring your brain remains in the optimal entrainment zone indefinitely.</p>
+            <p>Static frequencies cause brain habituation (boredom). Our proprietary algorithm subtly modulates pitch over time, keeping your Reticular Activating System engaged for indefinite focus.</p>
         </div>
+
         <div class="card">
             <div class="card-icon">🧠</div>
             <h3>Neuro Pulse™</h3>
-            <p>A hybrid audio engine combining binaural beats with isochronic pulses. Targets both the brainstem and thalamus for 40% faster state induction.</p>
+            <p>A dual-layer audio engine. We overlay isochronic pulses onto binaural carriers to target both the brainstem and thalamus simultaneously, inducing states 40% faster.</p>
         </div>
+
+        <div class="card">
+            <div class="card-icon">🌬️</div>
+            <h3>Breath Sync</h3>
+            <p>Align your respiratory vagal tone with audio. Includes guided patterns like <strong>4-7-8 (Relax)</strong>, <strong>Box Breathing (Focus)</strong>, and <strong>Coherence (Balance)</strong> with visual and haptic pacing.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🌿</div>
+            <h3>Nature Ambience</h3>
+            <p>Create your perfect acoustic environment. Mix high-fidelity 3D soundscapes—<strong>Heavy Rain, Deep Forest, and Flowing River</strong>—independently over your frequency session.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📳</div>
+            <h3>Haptic Immersion</h3>
+            <p>Feel the frequency. The app uses the device's vibration motor to create a tactile anchor for breathing exercises, allowing you to meditate with your eyes closed.</p>
+        </div>
+
         <div class="card">
             <div class="card-icon">🔒</div>
-            <h3>Offline & Secure</h3>
-            <p>Built with a "Privacy by Design" philosophy. All data stored locally. No tracking, no ads, no internet required for core functionality.</p>
+            <h3>Privacy by Design</h3>
+            <p>A completely offline utility. No accounts, no cloud sync, no tracking, and no ads. Your biometric usage data is encrypted and stored locally on your device.</p>
         </div>
     </section>
 
