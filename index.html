@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura HZ | Precision Neuro-Entrainment</title>
+    <meta name="description" content="Aura HZ - Advanced Binaural Beats & Isochronic Tones for Focus, Sleep, and Meditation.">
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #050505;
+            --surface-color: #121212;
+            --surface-border: rgba(255, 255, 255, 0.08);
+            --primary-gradient: linear-gradient(135deg, #03DAC5, #9A4DFF);
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --accent-cyan: #03DAC5;
+            --accent-purple: #9A4DFF;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- ANIMATED BACKGROUND --- */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, rgba(154, 77, 255, 0.05), transparent 70%);
+            animation: pulseGlow 10s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        /* --- HEADER --- */
+        header {
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--surface-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 5, 5, 0.8);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dev-name {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--primary-gradient);
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(3, 218, 197, 0.3);
+        }
+
+        /* --- PHONE MOCKUP (CSS Only) --- */
+        .mockup-container {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            perspective: 1000px;
+        }
+
+        .phone {
+            width: 300px;
+            height: 600px;
+            background: #000;
+            border-radius: 40px;
+            border: 8px solid #222;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 0 2px #333;
+            overflow: hidden;
+            transform: rotateX(10deg) rotateY(0deg);
+            transition: transform 0.5s ease;
+        }
+
+        .phone:hover {
+            transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #0f0f0f 0%, #050505 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Visualizer Animation inside Phone */
+        .visualizer-bar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-cyan);
+            animation: pulseRing 2s infinite;
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(0.5); opacity: 1; border-color: var(--accent-cyan); }
+            100% { transform: scale(2.5); opacity: 0; border-color: var(--accent-purple); }
+        }
+
+        /* --- FEATURES GRID --- */
+        .features {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            padding: 40px;
+            border-radius: 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 1px solid var(--surface-border);
+            margin-top: 60px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero { padding: 60px 5%; }
+            .phone { width: 260px; height: 520px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <header>
+        <div class="logo">AURA HZ</div>
+        <div class="dev-name">Auraluxe Dev</div>
+    </header>
+
+    <section class="hero">
+        <h1>Resonate <br><span class="gradient-text">Your Mind.</span></h1>
+        <p>Advanced binaural beats, isochronic tones, and psychoacoustic engineering designed to unlock focus, relaxation, and deep sleep.</p>
+        
+        <a href="#" class="cta-button">Coming Soon</a>
+
+        <div class="mockup-container">
+            <div class="phone">
+                <div class="screen">
+                    <div style="font-weight:bold; letter-spacing:4px; margin-bottom:40px; color:white;">AURA HZ</div>
+                    <div class="visualizer-bar"></div>
+                    <div style="margin-top:40px; color:#555; font-size:0.8rem; letter-spacing:2px;">PLAYING</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <div class="card-icon">🌊</div>
+            <h3>Smart Sweep™</h3>
+            <p>Our proprietary algorithm prevents neural habituation by subtly modulating frequencies, ensuring your brain remains in the optimal entrainment zone indefinitely.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Neuro Pulse™</h3>
+            <p>A hybrid audio engine combining binaural beats with isochronic pulses. Targets both the brainstem and thalamus for 40% faster state induction.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔒</div>
+            <h3>Offline & Secure</h3>
+            <p>Built with a "Privacy by Design" philosophy. All data stored locally. No tracking, no ads, no internet required for core functionality.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:help.auraluxedev@gmail.com">Support</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Auraluxe Dev. All rights reserved.<br>
+            Engineered with frequency in India.
+        </div>
+    </footer>
+
+</body>
+</html>
