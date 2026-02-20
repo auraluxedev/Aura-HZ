@@ -111,88 +111,88 @@
 
 <div class="container">
   <h1>Privacy Policy</h1>
-  <span class="date"><strong>Effective Date:</strong> February 18, 2026</span>
+  <span class="date"><strong>Effective Date:</strong> February 20, 2026</span>
 
-  <p>This Privacy Policy applies to the <strong>Aura HZ</strong> mobile application (the "App") developed by <strong>Auraluxe Dev</strong>. This policy describes how we handle your data and is intended to inform you about our practices regarding the collection, use, and disclosure of information.</p>
+  <p>This Privacy Policy applies to the <strong>Aura HZ</strong> mobile application (the "App") developed by <strong>Auraluxe Dev</strong>. This policy explains how we handle your data and outlines our commitment to your privacy.</p>
 
-  <p>By downloading and using the App, you agree to the terms of this Privacy Policy.</p>
+  <p>By downloading, installing, and using the App, you explicitly agree to the terms outlined in this Privacy Policy.</p>
 
   <h2>1. Data Collection & Usage (Google Play Data Safety)</h2>
-  <p>We are committed to a <strong>"Privacy by Design"</strong> philosophy. To be transparent with our users regarding the Google Play Data Safety section:</p>
+  <p>Aura HZ is built upon a strict <strong>"Privacy by Design"</strong> architecture. To provide total transparency regarding the Google Play Data Safety requirements:</p>
 
   <h3>A. Personal Data</h3>
-  <p>We do <strong>not</strong> collect, store, transmit, or share any Personally Identifiable Information (PII). This includes:</p>
+  <p>We do <strong>not</strong> collect, store, transmit, or share any Personally Identifiable Information (PII). This includes, but is not limited to:</p>
   <ul>
-    <li>Names, Addresses, or Phone Numbers</li>
+    <li>Names, Physical Addresses, or Phone Numbers</li>
     <li>Email Addresses</li>
-    <li>User IDs or Account Credentials</li>
+    <li>User IDs, Account Credentials, or Passwords</li>
     <li>Financial or Payment Information</li>
   </ul>
 
   <h3>B. Device & Usage Data</h3>
-  <p>The App operates as a standalone utility. We do <strong>not</strong> collect:</p>
+  <p>The App operates as a self-contained, offline-first utility. We do <strong>not</strong> collect:</p>
   <ul>
-    <li>Device Identifiers (IMEI, MAC Address, Advertising ID)</li>
-    <li>Location Data (GPS or Coarse Location)</li>
-    <li>App Usage Statistics or Crash Logs (No third-party analytics)</li>
-    <li>Contacts or Calendar information</li>
+    <li>Device Identifiers (IMEI, MAC Address, Android ID, or Advertising ID)</li>
+    <li>Location Data (GPS, Wi-Fi, or Coarse Location)</li>
+    <li>App Usage Statistics or Crash Logs (No third-party telemetry)</li>
+    <li>Contacts, Calendars, or Media Files outside the App's scope</li>
   </ul>
 
   <h2>2. Internet & Network Access</h2>
-  <p>The App functions primarily as an <strong>offline</strong> utility. However, the App requires internet permissions for specific, non-data-collecting system functions:</p>
+  <p>While Aura HZ functions primarily offline, it requests network access permissions for critical, non-data-collecting security functions:</p>
   <ul>
-    <li><strong>Google Play Licensing Service:</strong> To verify that the App was legitimately purchased/downloaded from the Google Play Store to prevent piracy.</li>
-    <li><strong>Security Checks:</strong> To ensure the integrity of the APK file has not been tampered with.</li>
+    <li><strong>Anti-Piracy & Integrity Checks:</strong> To verify the cryptographic signature of the App and ensure it was legitimately installed via the Google Play Store or authorized channels.</li>
+    <li><strong>Security Validation:</strong> To perform background checks that protect the App from unauthorized tampering, cloning, or reverse engineering.</li>
   </ul>
-  <p>No user content or personal data is transmitted during these verification processes.</p>
+  <p><strong>Zero user content, preferences, or personal data is transmitted during these security verifications.</strong></p>
 
-  <h2>3. Local Data Storage</h2>
-  <p>All user-generated content and preferences are stored <strong>locally</strong> on your device within the App's isolated sandbox storage (`SQLite Database` and `SharedPreferences`).</p>
-  <p>This data includes:</p>
+  <h2>3. Local Data Storage & Encryption</h2>
+  <p>All user-generated content and configurations are stored <strong>locally</strong> on your device within the App's isolated and encrypted sandbox (`Room Database` and `EncryptedSharedPreferences`).</p>
+  <p>This local data includes:</p>
   <ul>
-    <li>Custom frequency presets</li>
-    <li>App settings (Volume, Haptics, Theme)</li>
-    <li>Usage streaks and gamification stats</li>
-    <li>Local alarm schedules</li>
+    <li>Custom binaural frequency presets</li>
+    <li>Application settings (Volume, Haptics, Theme)</li>
+    <li>Usage streaks and session statistics</li>
+    <li>Local alarm and timer schedules</li>
   </ul>
-  <p><strong>Note:</strong> Since we do not have cloud servers, uninstalling the App or clearing its data via Android Settings will permanently delete this local data. We cannot recover it for you.</p>
+  <p><strong>Important:</strong> Because we do not use cloud servers, uninstalling the App or clearing its storage via Android Settings will permanently and irreversibly delete this data. We cannot recover it for you.</p>
 
   <h2>4. Android Permissions Declaration</h2>
-  <p>We request the following permissions solely to enable specific App functionalities:</p>
+  <p>We request the following device permissions solely to enable core App functionalities:</p>
 
   <h3>A. POST_NOTIFICATIONS (Android 13+)</h3>
-  <p><strong>Purpose:</strong> Used to display media playback controls in the notification shade and to deliver user-scheduled daily reminders.</p>
+  <p><strong>Purpose:</strong> Required to display media playback controls in the notification shade and to deliver user-scheduled daily reminders.</p>
 
-  <h3>B. VIBRATE & HAPTIC FEEDBACK</h3>
-  <p><strong>Purpose:</strong> Used for the "Breath Sync" feature to provide tactile feedback during meditation exercises.</p>
+  <h3>B. VIBRATE</h3>
+  <p><strong>Purpose:</strong> Used to provide tactile haptic feedback during meditation exercises and UI interactions.</p>
 
-  <h3>C. AUDIO FOCUS & FOREGROUND SERVICE</h3>
-  <p><strong>Purpose:</strong> Required to play audio in the background while the screen is off or while using other apps. This ensures uninterrupted playback sessions.</p>
+  <h3>C. FOREGROUND_SERVICE & MEDIA_PLAYBACK</h3>
+  <p><strong>Purpose:</strong> Strictly required by the Android OS to generate and play high-fidelity audio frequencies in the background while the device screen is off or while using other applications.</p>
 
   <h3>D. SCHEDULE_EXACT_ALARM</h3>
-  <p><strong>Purpose:</strong> Used strictly for the "Daily Reminder" feature to trigger notifications at the exact time chosen by the user.</p>
+  <p><strong>Purpose:</strong> Utilized exclusively for the "Daily Reminder" feature to trigger precise local notifications at the time chosen by the user.</p>
 
   <h2>5. Children’s Privacy</h2>
-  <p>The App does not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children. Since the App functions offline and does not feature chat, social sharing, or data collection, it is safe for general audiences.</p>
+  <p>The App does not address or target anyone under the age of 13. We do not knowingly collect personal identifiable information from children. Because the App functions entirely offline and lacks chat, social sharing, or data harvesting features, it is inherently safe for general audiences of all ages.</p>
 
-  <h2>6. Third-Party Service Providers</h2>
-  <p>The App contains <strong>zero</strong> third-party SDKs for:</p>
+  <h2>6. Zero Third-Party Tracking</h2>
+  <p>Aura HZ contains <strong>zero</strong> third-party SDKs for:</p>
   <ul>
-    <li>Advertising (AdMob, Unity Ads, etc.)</li>
-    <li>Analytics (Firebase, Google Analytics, Crashlytics)</li>
-    <li>Social Media Integration (Facebook SDK, etc.)</li>
+    <li>Advertising (e.g., AdMob, Unity Ads)</li>
+    <li>Analytics & Telemetry (e.g., Firebase, Google Analytics, Crashlytics)</li>
+    <li>Social Media Integration (e.g., Facebook SDK)</li>
   </ul>
-  <p>This ensures that your usage habits remain private and are not tracked across other apps or websites.</p>
+  <p>This guarantees that your usage habits remain entirely private and are never tracked or monetized by external entities.</p>
 
   <h2>7. Security</h2>
-  <p>We value your trust in providing us your local data. We strive to use commercially acceptable means of protecting it by utilizing standard Android encryption for local storage. However, remember that no method of electronic storage is 100% secure.</p>
+  <p>We value your trust in our application. We protect your local data by utilizing Android's Bank-Grade `EncryptedSharedPreferences` and secure data vaults. However, please be aware that no method of electronic storage on a physical device is 100% immune to unauthorized access if the device itself is compromised or "rooted."</p>
 
   <h2>8. Changes to This Privacy Policy</h2>
-  <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-  <p>These changes are effective immediately after they are posted on this page.</p>
+  <p>We reserve the right to update or modify our Privacy Policy at any time. You are advised to review this page periodically for any changes. We will notify you of any updates by posting the new Privacy Policy on this page.</p>
+  <p>These changes are effective immediately after they are published.</p>
 
   <h2>9. Contact Us</h2>
-  <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us. We are committed to resolving any privacy concerns you may have.</p>
+  <p>If you have any questions, concerns, or suggestions regarding our Privacy Policy, please do not hesitate to contact us.</p>
 
   <p><strong>Developer:</strong> Auraluxe Dev</p>
   <p><strong>Support Email:</strong> <a href="mailto:help.auraluxedev@gmail.com">help.auraluxedev@gmail.com</a></p>
